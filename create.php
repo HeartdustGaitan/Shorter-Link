@@ -19,7 +19,7 @@ if(!preg_match("/^[a-zA-Z]+[:\/\/]+[A-Za-z0-9\-_]+\\.+[A-Za-z0-9\.\/%&=\?\-_]+$/
         $query->bind_param("ss", $short, $url);
 
         if ($query->execute()) {
-            $html = "Tu URL corta es: <br />shrtr/" . $short;
+            $html = "Tu enlace acortado es: <br/> <a href='http://linkorto.com/shrtr/" . $short . "'> linkorto.com/shrtr/" . $short . "</a>";
         } else {
             $html = "Error: no se pudo insertar en la base de datos";
         }
@@ -31,22 +31,23 @@ if(!preg_match("/^[a-zA-Z]+[:\/\/]+[A-Za-z0-9\-_]+\\.+[A-Za-z0-9\.\/%&=\?\-_]+$/
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Makes URLs Shrtr</title>
-    <link type="text/css" rel="stylesheet" href="./css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkorto</title>
+    <link type="text/css" rel="stylesheet" href="./css/style.css?v=4" />
+    <link rel="icon" href="icons/LK.ico" type="image/x-icon">
 </head>
 <body>
     <div id="pagewrap">
-        <h1>shrt<span>r</span>.me</h1>
+        <h1>Linkorto</h1>
 
         <div>
             <?= $html ?>
             <br /><br />
             <span><a href="./">X</a></span>
         </div>
-
     </div>
 </body>
 </html>

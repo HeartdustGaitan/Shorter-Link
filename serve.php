@@ -37,12 +37,12 @@ if (!empty($short)) {
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Makes URLs Shrtr</title>
-    <link type="text/css" rel="stylesheet" href="./css/style.css" />
+    <title>Linkorto</title>
+    <link type="text/css" rel="stylesheet" href="./css/style.css?v=3" />
 </head>
 <body>
     <div id="pagewrap">
-        <h1>shrt<span>r</span>.me</h1>
+        <h1>Linkorto</h1>
 
         <div>
             <?= $html ?>
